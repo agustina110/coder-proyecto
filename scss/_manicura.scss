@@ -1,0 +1,124 @@
+@use 'variables';
+@use 'mixins';
+
+.manicura-section {
+    font-family: variables.$font-family-primary;
+    font-style: variables.$font-style-italic;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: variables.$primary-bg-color;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .header, .footer {
+        text-align: center;
+        background-color: variables.$primary-bg-color;
+        padding: 20px 0;
+
+        h1 {
+            margin: 0;
+            color: variables.$font-color;
+            font-size: variables.$font-size-header;
+        }
+    }
+
+    .footer {
+        background-color: variables.$secondary-bg-color;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: variables.$gap-between-cards;
+        padding: 20px;
+    }
+
+    .card {
+        @include mixins.card-style;
+
+        // Limitar el tamaño de las tarjetas
+        max-width: 400px;
+        width: 100%;
+
+        img {
+            width: 100%; 
+            height: auto; 
+            max-height: 300px; 
+            object-fit: cover; 
+            border-bottom: 2px solid variables.$border-color;
+            border-radius: variables.$border-radius variables.$border-radius 0 0;
+        }
+
+        .button {
+            @include mixins.button-style;
+        }
+    }
+
+    .card-link {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover h3 {
+            text-decoration: underline;
+        }
+    }
+
+    // Media Queries para hacer el diseño responsive
+
+    // Dispositivos móviles (pantallas de 320px a 480px)
+    @media (max-width: 480px) {
+        .header, .footer {
+            padding: 10px 0;
+        }
+
+        .container {
+            flex-direction: column; // Las tarjetas se apilan verticalmente
+            align-items: center;
+        }
+
+        .card {
+            max-width: 90%; // Las tarjetas ocupan el 90% del ancho de la pantalla
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.5rem; // Ajustar tamaño del título en móvil
+        }
+    }
+
+    // Dispositivos tablet (pantallas de 481px a 768px)
+    @media (max-width: 768px) {
+        .header, .footer {
+            padding: 15px 0;
+        }
+
+        .container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .card {
+            max-width: 45%; // Las tarjetas ocupan el 45% del ancho
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem; // Ajustar tamaño del título en tablet
+        }
+    }
+
+    // Dispositivos de escritorio (pantallas mayores a 768px)
+    @media (min-width: 769px) {
+        .container {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .card {
+            max-width: 30%; // Las tarjetas ocupan el 30% del ancho
+        }
+    }
+}

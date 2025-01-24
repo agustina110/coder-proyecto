@@ -1,0 +1,55 @@
+@use 'variables';
+@use 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.contact-container {
+  // Estilos del contenedor de contactos
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; // Reducido el espacio entre las tarjetas
+  padding: 20px;
+}
+
+.contact-card {
+  @include mixins.card-style;
+  flex: 1 1 calc(40% - 20px); // Ajustado para hacer las tarjetas más pequeñas
+  max-width: 250px; // Ajuste mayor para reducir el tamaño de las tarjetas
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 180px; // Reducimos la altura máxima de las imágenes
+    object-fit: cover;
+    border-bottom: 2px solid variables.$border-color;
+    border-radius: variables.$border-radius variables.$border-radius 0 0;
+  }
+
+  .header {
+    padding: 15px;
+    background-color: variables.$secondary-bg-color;
+    font-weight: bold;
+    font-size: 16px; // Reducido el tamaño de la fuente para coincidir con el tamaño más pequeño
+  }
+
+  .content {
+    margin-top: 15px;
+    font-size: 16px; // Reducido el tamaño de la fuente
+  }
+}
+
+.footer {
+  // Estilos del pie de página
+  background-color: variables.$secondary-bg-color;
+  text-align: center;
+  padding: 1.5rem; // Reducido el padding del pie de página
+}
+
+.map-image {
+    width: 100%;  // Ajusta el tamaño al 100% del contenedor
+    max-width: 600px; // Define un límite de tamaño (por ejemplo, 600px de ancho máximo)
+    height: auto; // Mantiene la proporción de la imagen
+    margin: 20px auto;  // Si deseas algo de espacio entre la imagen y los elementos de arriba
+    display: block;
+}
+  

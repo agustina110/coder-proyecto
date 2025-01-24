@@ -1,0 +1,117 @@
+@use 'variables';
+@use 'mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+  margin: 0;
+  font-family: variables.$font-family-secondary;
+  background-color: variables.$background-bg-color;
+  font-weight: bold;
+}
+
+.header {
+  @include mixins.shared-header-footer-style;
+  padding: 20px 0; // Espaciado específico para el header
+  font-weight: bold;
+}
+
+.image-section {
+  background-color: variables.$background-bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 5px;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  object-fit: cover;
+  border-radius: variables.$border-radius;
+  transition: none; // Sin efecto hover para la primera imagen
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;  // Permite que los elementos se ajusten si no caben
+  justify-content: space-between; // Distribuye los elementos de manera igualitaria
+  padding: 20px;
+  background-color: variables.$background-bg-color;
+}
+
+.menu-item {
+  width: 22%;  // Asigna un ancho fijo para que se ubiquen horizontalmente
+  margin-bottom: 20px; // Añadir un poco de espacio entre las imágenes del menú
+  @include mixins.card-style;
+  text-align: center;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 10px;
+  border-radius: variables.$border-radius;
+  transition: transform 0.3s ease, filter 0.3s ease; // Transición para el hover
+
+  &:hover {
+    transform: scale(1.05); // Ampliar un 5%
+    filter: brightness(1.1); // Aumentar ligeramente el brillo
+  }
+}
+
+.menu-item h3 {
+  margin: 10px 0;
+  font-size: variables.$font-size-body;
+  color: variables.$accent-color;
+}
+
+footer {
+  background-color: variables.$secondary-bg-color;
+}
+
+// Navbar styles for mobile responsiveness
+.navbar-toggler {
+  border-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-color: variables.$accent-color;  // Color del ícono de menú en dispositivos móviles
+}
+
+.navbar-collapse {
+  justify-content: center;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    justify-content: space-around;  // Centra el menú en pantallas pequeñas
+  }
+
+  .menu-item {
+    width: 45%; // Ajusta el tamaño de los elementos del menú en pantallas más pequeñas
+    margin-bottom: 20px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-nav li {
+    margin-right: 0; // Elimina el margen entre los elementos de la navbar en dispositivos pequeños
+    margin-bottom: 10px; // Añade espacio entre los elementos
+  }
+
+  /* Prevent horizontal scrolling on small screens */
+  body {
+    overflow-x: hidden;  // Elimina el desbordamiento horizontal en pantallas pequeñas
+  }
+}

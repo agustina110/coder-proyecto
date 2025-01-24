@@ -1,0 +1,53 @@
+@use 'variables';
+
+// Mixin para los botones
+@mixin button-style {
+    font-size: variables.$font-size-button;
+    font-weight: variables.$font-weight-bold;
+    color: variables.$button-color;
+    padding: variables.$button-padding;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+}
+
+// Mixin para las tarjetas
+@mixin card-style {
+    background-color: variables.$card-bg-color;
+    border-radius: variables.$border-radius;
+    box-shadow: variables.$card-shadow;
+    overflow: hidden;
+    text-align: center;
+    flex: 1 1 calc(23% - #{variables.$gap-between-cards});
+    max-width: calc(23% - #{variables.$gap-between-cards});
+    transition: transform 0.3s ease;
+    padding: 15px;
+
+    &:hover {
+        transform: scale(variables.$card-hover-scale);
+    }
+}
+
+
+
+
+@mixin card-hover {
+    &:hover {
+      transform: scale(variables.$card-hover-scale);
+    }
+}
+
+@mixin card-style {
+    background-color: #ffffff;
+    border: 1px solid variables.$border-color;    
+  }
+
+  @mixin shared-header-footer-style {
+    text-align: center;
+    font-size: variables.$font-size-heading;
+    font-weight: bold;
+    color: variables.$text-color;
+    font-family: variables.$font-family-primary;
+    font-style: italic;
+  }
+  

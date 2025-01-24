@@ -1,0 +1,86 @@
+@use 'variables';
+@use 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.turnos-section {
+  width: 90%;
+  height: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.turnos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  margin-left: 80px;
+}
+
+.turno-card {
+  @include mixins.card-style;
+}
+
+.turno-card__header {
+  @include mixins.shared-header-footer-style;
+  padding: 20px 0;
+  background-color: variables.$secondary-bg-color;
+}
+
+.turno-card img {
+  width: 100%; // Ajusta al ancho del contenedor
+  max-width: 300px; // Define un tamaño máximo más pequeño
+  height: auto; // Mantén la proporción de la imagen
+  border-radius: variables.$border-radius;
+  margin: 0 auto; // Centra la imagen dentro del contenedor
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.turno-card img:hover {
+  transform: scale(1.05); // Aumenta ligeramente el tamaño
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); // Añade una sombra elegante
+}
+
+// Media Queries for Responsive Design
+@media (max-width: 768px) {
+  .turnos-section {
+    padding: 10px;  // Reduce el padding en pantallas pequeñas
+  }
+
+  .turnos-container {
+    margin-left: 0;  // Elimina el margen izquierdo para adaptarse mejor en pantallas pequeñas
+    justify-content: center;  // Centra los elementos en pantallas pequeñas
+  }
+
+  .turno-card {
+    width: 100%;  // Hace que las tarjetas ocupen el 100% del ancho del contenedor
+    margin-bottom: 20px;  // Añade espacio entre las tarjetas
+  }
+
+  .turno-card img {
+    max-width: 100%;  // Ajusta el tamaño de la imagen para pantallas pequeñas
+  }
+}
+
+@media (max-width: 480px) {
+  .turnos-section {
+    width: 100%;
+    padding: 5px;  // Reduce aún más el padding en pantallas extra pequeñas
+  }
+
+  .turnos-container {
+    gap: 15px;  // Reduce el espacio entre las tarjetas en pantallas muy pequeñas
+  }
+
+  .turno-card {
+    width: 100%;  // Asegura que las tarjetas ocupen todo el ancho disponible
+    margin-bottom: 10px;  // Reduce el margen inferior entre las tarjetas
+  }
+}

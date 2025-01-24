@@ -1,449 +1,461 @@
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color:#f7cef6;
-}
-
-.header {
-    text-align: center;
-    padding: 20px 0;
-    font-size: 24px;
-    font-weight: bold;
-    
-}
-
-.header {
-    
-    color: black;
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    
-}
-
-.image-section {
-    background-color:#f7cef6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    padding: 5px;
-}
-
-.image-section img {
-    width: 100%;
-    height: auto;
-    max-width: 1200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* Menú de navegación */
-.menu {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: #f7cef6; /* Fondo rosa */
-}
-
-/* Estilo básico del menú */
-ul.menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Esto hace que los elementos se dispongan horizontalmente */
-}
-
-ul.menu li {
-    margin-right: 20px; /* Espaciado entre los elementos */
-}
-
-ul.menu li a {
-    text-decoration: none;
-    color: #808080; /* Letras grises */
-    padding: 10px;
-    display: block; /* Hace que el área del enlace sea más fácil de clicar */
-    transition: color 0.3s, background-color 0.3s; /* Añadido para transición suave */
-}
-
-ul.menu li a:hover {
-    color: #ffffff; /* Color de texto blanco al pasar el ratón */
-    background-color: #000000; /* Fondo negro al pasar el ratón */
-}
-
-.menu-item {
-    width: 22%;
-    background-color: #f7cef6;
-    text-align: center;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-}
-
-.menu-item:hover {
-    transform: scale(1.05);
-}
-
-
-a {
-    color: #8a2be2; /* Lila */
-    font-weight: bold; /* Letra gordita */
-    text-decoration: none; /* Quita el subrayado predeterminado */
-}
-
-a:hover {
-    text-decoration: underline; /* Agrega un subrayado al pasar el cursor (opcional) */
-    color: #6a0dad; /* Cambia el tono de lila al hacer hover (opcional) */
-}
-
-
-.menu-item img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
-
-.menu-item h3 {
-    margin: 10px 0;
-    font-size: 16px;
-    color: #8a2be2;
-}
-
-footer {
-    background-color: rgb(245, 62, 245);
-    color: black;
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 .manicura-section {
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color:#f7cef6;
-    min-height: 100vh; 
-    display: flex;
-    flex-direction: column;
+  font-family: "https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap", "cursiva";
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f7cef6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-
-.manicura-section > .header,
-.manicura-section > .footer {
-    text-align: center;
-    background-color:#f7cef6;
-    padding: 5px 0; 
+.manicura-section .header, .manicura-section .footer {
+  text-align: center;
+  background-color: #f7cef6;
+  padding: 20px 0;
 }
-
-.manicura-section > .header h1,
-.manicura-section > .footer h1 {
-    margin: 0;
-    color: black; 
-    font-size: 28px; 
+.manicura-section .header h1, .manicura-section .footer h1 {
+  margin: 0;
+  color: black;
+  font-size: 2rem;
 }
-.manicura-section > .footer {
-    background-color: rgb(245, 62, 245);
+.manicura-section .footer {
+  background-color: rgb(245, 62, 245);
 }
-
-
-/* Contenedor principal */
 .manicura-section .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Espaciado uniforme */
-    gap: 20px; /* Separación entre cards */
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
 }
-
-/* Cards */
 .manicura-section .card {
-    background-color: #fdfdfd; /* Fondo blanco o claro */
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    overflow: hidden;
-    text-align: center;
-    flex: 1 1 calc(23% - 20px); /* Cards del mismo tamaño */
-    max-width: calc(23% - 20px); /* Ajuste del tamaño */
-    transition: transform 0.3s ease; /* Animación al pasar el cursor */
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  max-width: 400px;
+  width: 100%;
 }
-
-/* Animación al pasar el cursor */
-.manicura-section .card:hover {
-    transform: scale(1.05); /* Ampliación sutil al pasar el mouse */
-}
-
-/* Imágenes dentro de las cards */
 .manicura-section .card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 2px solid #eaeaea; /* Línea separadora */
-    border-radius: 15px 15px 0 0; /* Bordes redondeados superiores */
-    object-fit: cover; /* Ajustar imagen sin deformarse */
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-bottom: 2px solid #eaeaea;
+  border-radius: 15px 15px 0 0;
 }
-
-/* Botón o texto en las cards */
 .manicura-section .card .button {
-    font-size: 16px; /* Tamaño del texto */
-    font-weight: bold;
-    color: #a000c7; /* Color del texto */
-    padding: 15px;
-    text-decoration: none;
-    display: block;
-    text-transform: uppercase; /* Texto en mayúsculas */
+  font-size: 16px;
+  font-weight: bold;
+  color: #a000c7;
+  padding: 15px;
+  text-decoration: none;
+  display: block;
+  text-transform: uppercase;
 }
-.card-link {
-    text-decoration: none;
-    color: inherit;
+.manicura-section .card-link {
+  text-decoration: none;
+  color: inherit;
 }
-
-.card-link:hover h3 {
-    text-decoration: underline; /*subraya el texto al pasar el mouse */
+.manicura-section .card-link:hover h3 {
+  text-decoration: underline;
 }
-
-.turnos-section {
-    width: 90%; /* Se adapta al ancho de la pantalla */
-    height: 90%; /* Se adapta al alto de la pantalla */
-    max-width: 1200px;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Cambio de space-between a flex-start */
-    align-items: center;
-}
-
-/* Encabezado */
-header h1 {
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    margin: 0;
-    padding: 10px 0; /* Ajusté el padding */
-    box-sizing: border-box;
-    background-color:#f7cef6;
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* Contenedor de tarjetas (mantenerlas en horizontal) */
-.turnos-container {
-    display: flex; /* Cambio de grid a flex */
-    flex-wrap: wrap; /* Para que las tarjetas se envuelvan cuando sea necesario */
-    justify-content: space-between; /* Mantener el espaciado entre las cards */
-    gap: 30px; /* Separación entre las cards */
-    align-items: center;
-    width: 100%;
-    margin-left: 80px;
-}
-
-/* Tarjetas */
-.turno-card {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    display: flex;
+@media (max-width: 480px) {
+  .manicura-section .header, .manicura-section .footer {
+    padding: 10px 0;
+  }
+  .manicura-section .container {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    flex: 1 1 calc(30% - 30px); /* Para hacer que las cards sean del mismo tamaño en filas horizontales */
-    max-width: calc(30% - 30px); /* Asegura que las cards no se excedan en tamaño */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-    background-color: #fff; /* Fondo blanco */
+  }
+  .manicura-section .card {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+  .manicura-section h1 {
+    font-size: 1.5rem;
+  }
 }
-
-/* Imágenes dentro de las tarjetas */
-.turno-card img {
-    width: 80px; /* Asegura que la imagen no se estire demasiado */
-    height: auto; /* Mantiene la relación de aspecto */
-    object-fit: contain; /* Asegura que la imagen no se recorte */
-    background-color: #eee; /* Fondo gris para las imágenes que no se carguen */
-    margin-bottom: 15px;
+@media (max-width: 768px) {
+  .manicura-section .header, .manicura-section .footer {
+    padding: 15px 0;
+  }
+  .manicura-section .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .manicura-section .card {
+    max-width: 45%;
+    margin-bottom: 20px;
+  }
+  .manicura-section h1 {
+    font-size: 1.8rem;
+  }
 }
-
-.turno-card p {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
-}
-
-/* Efecto hover */
-.turno-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Imágenes dentro de las tarjetas */
-.turno-card img {
-    width: 80px; /* Asegura que la imagen no se estire demasiado */
-    height: auto; /* Mantiene la relación de aspecto */
-    object-fit: contain; /* Asegura que la imagen no se recorte */
-    background-color: #eee; /* Fondo gris para las imágenes que no se carguen */
-    margin-bottom: 15px;
-}
-/* Estilo de header y footer en la sección de turnos */
-.turnos-section > .header,
-.turnos-section > .Footer {
-    text-align: center;
-    background-color:#f7cef6;
-    padding: 5px 0;
-    height: 40px;
-    font-family: "Playfair Display", serif !important ;  /* Agregado: misma fuente para footer */
-    font-style: italic !important;  /* Estilo cursiva para footer */
-}
-
-/* Aseguramos que tanto el header como el footer tengan la misma apariencia */
-.turnos-section > .header h1,
-.turnos-section > .footer h2 {
-    margin: 0;
-    color: black; 
-    font-size: 20px; /* Tamaño igual para ambos */
-}
-
-/* Subtítulo */
-.subheading {
-    font-size: 18px;
-    margin: 5px 0; /* Ajusté el margen para reducir el espacio */
-    color: #6a0dad;
-    font-family: "Playfair Display", serif !important;
-    font-style: italic !important;
-}
-
-
-/* Encabezado de la sección */
-.reviews-section .header {
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-   background-color:#f7cef6;
-}
-
-/* Contenedor de las tarjetas de reseñas */
-.reviews-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Estilo de cada tarjeta de reseña */
-.review-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.2s ease-in-out;
-}
-
-.review-card:hover {
-    transform: scale(1.05);
-}
-
-/* Títulos de las reseñas (nombres de las personas) */
-.review-card h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: #8a2be2;
-    margin-bottom: 10px;
-}
-
-/* Texto del cuerpo de la reseña */
-.review-card p {
-    font-size: 14px;
-    color: #555;
-    margin: 10px 0;
-    line-height: 1.4;
-}
-
-/* Estilo para las estrellas */
-.stars {
-    font-size: 16px;
-    color: #f1c40f;
-    margin-top: 10px;
+@media (min-width: 769px) {
+  .manicura-section .container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .manicura-section .card {
+    max-width: 30%;
+  }
 }
 
 .contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px; /* Aumentar la separación entre tarjetas */
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
 }
 
-
-/* Tarjetas de contacto */
 .contact-card {
-    background-color: #77f3cc;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(45% - 20px); /* Ocupa aproximadamente el 45% del ancho con espacio para el gap */
-    max-width: calc(45% - 20px); /* Asegura que no exceda el tamaño deseado */
-    padding: 30px; /* Aumentar el padding */
-    text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  flex: 1 1 calc(40% - 20px);
+  max-width: 250px;
 }
-
+.contact-card img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #eaeaea;
+  border-radius: 15px 15px 0 0;
+}
 .contact-card .header {
-    padding: 15px; /* Más espacio en el encabezado */
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 18px; /* Aumentar tamaño del texto */
-    
+  padding: 15px;
+  background-color: rgb(245, 62, 245);
+  font-weight: bold;
+  font-size: 16px;
 }
-.contact-card:hover {
-    transform: scale(1.05);
-}
-
 .contact-card .content {
-    margin-top: 15px; /* Más separación entre el contenido */
-    font-size: 18px; /* Aumentar tamaño del texto */
-    
+  margin-top: 15px;
+  font-size: 16px;
 }
 
-
-/* Footer */
 .footer {
-    text-align: center;
-    background-color: #f7cef6;
-    padding: 0;
-    font-size: 20px; /* Aumentar tamaño del texto */
-    color: #333;
-    margin-top: 30px;
-}
-.contact-container .header{
-    background-color: #f7cef6;
+  background-color: rgb(245, 62, 245);
+  text-align: center;
+  padding: 1.5rem;
 }
 
 .map-image {
-    display: block;
-    margin: 20px auto; /* Centra la imagen horizontalmente */
-    max-width: 90%; /* Ajusta el ancho máximo de la imagen */
-    object-fit: cover; /* Recorta la imagen para ajustarse al tamaño especificado */
-    border-radius: 10px; /* Opcional: bordes redondeados */
-    
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
 }
 
+.turnos-section {
+  width: 90%;
+  height: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.turnos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  margin-left: 80px;
+}
+
+.turno-card {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+
+.turno-card__header {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+  font-family: "https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap", "cursiva";
+  font-style: italic;
+  padding: 20px 0;
+  background-color: rgb(245, 62, 245);
+}
+
+.turno-card img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.turno-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .turnos-section {
+    padding: 10px;
+  }
+  .turnos-container {
+    margin-left: 0;
+    justify-content: center;
+  }
+  .turno-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .turno-card img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .turnos-section {
+    width: 100%;
+    padding: 5px;
+  }
+  .turnos-container {
+    gap: 15px;
+  }
+  .turno-card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.reviews-section {
+  width: 90%;
+  height: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.reviews-section .header {
+  font-family: "https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap", "cursiva";
+  font-style: italic;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+.reviews-section .reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+  width: 100%;
+}
+.reviews-section .review-card {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+.reviews-section .review-card:hover {
+  transform: scale(1.05);
+}
+.reviews-section .review-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #8a2be2;
+  margin-bottom: 10px;
+}
+.reviews-section .review-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+.reviews-section .review-card .stars {
+  font-size: 16px;
+  color: #f1c40f;
+  margin-top: 10px;
+}
+.reviews-section .footer {
+  font-family: "https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap", "cursiva";
+  font-style: italic;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+@media (max-width: 480px) {
+  .reviews-section .header {
+    font-size: 1.5rem;
+    padding: 15px 0;
+  }
+  .reviews-section .reviews-container {
+    grid-template-columns: 1fr;
+  }
+  .reviews-section .review-card {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+  .reviews-section .footer {
+    font-size: 1.5rem;
+    padding: 15px 0;
+  }
+}
+@media (max-width: 768px) {
+  .reviews-section .header {
+    font-size: 1.8rem;
+    padding: 15px 0;
+  }
+  .reviews-section .reviews-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .reviews-section .review-card {
+    max-width: 45%;
+    margin-bottom: 20px;
+  }
+  .reviews-section .footer {
+    font-size: 1.8rem;
+    padding: 15px 0;
+  }
+}
+@media (min-width: 769px) {
+  .reviews-section .reviews-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .reviews-section .review-card {
+    max-width: 30%;
+  }
+  .reviews-section .footer {
+    font-size: 20px;
+    padding: 20px 0;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7cef6;
+  font-weight: bold;
+}
+
+.header {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+  font-family: "https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap", "cursiva";
+  font-style: italic;
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+.image-section {
+  background-color: #f7cef6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 5px;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: none;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f7cef6;
+}
+
+.menu-item {
+  width: 22%;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.menu-item img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.menu-item h3 {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #8a2be2;
+}
+
+footer {
+  background-color: rgb(245, 62, 245);
+}
+
+.navbar-toggler {
+  border-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-color: #8a2be2;
+}
+
+.navbar-collapse {
+  justify-content: center;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    justify-content: space-around;
+  }
+  .menu-item {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  /* Prevent horizontal scrolling on small screens */
+  body {
+    overflow-x: hidden;
+  }
+}
+header, footer {
+  font-family: "https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap", "cursiva";
+}
+
+/*# sourceMappingURL=style.css.map */

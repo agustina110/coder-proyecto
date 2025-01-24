@@ -1,0 +1,10 @@
+@use 'variables';
+@use 'sass:color';
+@import 'manicura';
+@import 'contacto';
+@import 'turnos';
+@import 'nosotras';
+@import 'index';
+header, footer {
+    font-family: variables.$font-family-primary;
+}
