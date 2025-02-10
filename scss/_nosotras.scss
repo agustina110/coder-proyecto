@@ -28,8 +28,8 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
-    justify-items: center; // Centra las tarjetas en cada columna
-    width: 100%; // Asegura que las tarjetas ocupen el ancho completo
+    justify-items: center;
+    width: 100%;
   }
 
   .review-card {
@@ -68,60 +68,55 @@
     color: black;
   }
 
-  // Media Queries para hacer el diseño responsive
-
-  // Dispositivos móviles (pantallas de 320px a 480px)
   @media (max-width: 480px) {
     .header {
-      font-size: 1.5rem; // Ajustar tamaño de fuente en móvil
+      font-size: 1.5rem;
       padding: 15px 0;
     }
 
     .reviews-container {
-      grid-template-columns: 1fr; // Las tarjetas se apilan en una sola columna
+      grid-template-columns: 1fr;
     }
 
     .review-card {
-      max-width: 90%; // Limitar el tamaño de las tarjetas
+      max-width: 95%;
       margin-bottom: 20px;
     }
 
     .footer {
-      font-size: 1.5rem; // Ajustar tamaño de fuente en móvil
+      font-size: 1.5rem;
       padding: 15px 0;
     }
   }
 
-  // Dispositivos tablet (pantallas de 481px a 768px)
   @media (max-width: 768px) {
     .header {
-      font-size: 1.8rem; // Ajustar tamaño de fuente en tablet
+      font-size: 1.8rem;
       padding: 15px 0;
     }
 
     .reviews-container {
-      grid-template-columns: repeat(2, 1fr); // 2 columnas para tablets
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .review-card {
-      max-width: 45%; // Limitar el tamaño de las tarjetas
+      max-width: 48%;
       margin-bottom: 20px;
     }
 
     .footer {
-      font-size: 1.8rem; // Ajustar tamaño de fuente en tablet
+      font-size: 1.8rem;
       padding: 15px 0;
     }
   }
 
-  // Dispositivos de escritorio (pantallas mayores a 768px)
   @media (min-width: 769px) {
     .reviews-container {
-      grid-template-columns: repeat(3, 1fr); // 3 columnas para pantallas grandes
+      grid-template-columns: repeat(3, 1fr);
     }
 
     .review-card {
-      max-width: 30%; // Limitar el tamaño de las tarjetas
+      max-width: 30%;
     }
 
     .footer {
@@ -130,4 +125,3 @@
     }
   }
 }
-
